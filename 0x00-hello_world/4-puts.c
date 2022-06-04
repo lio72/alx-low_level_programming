@@ -2,6 +2,6 @@
 /*this programme printf one message with puts fonction*/
 int main(void)
 {
-	puts("\"Programming is like building a multilingual puzzle\n");
+	puts("\"Programming is like building a multilingual puzzle\n\n");
 	return (0);
 }

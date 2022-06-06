@@ -6,7 +6,7 @@
  * Return: always 0 (sucess)
 */
 int main(void)
-{i
+{
 	printf("with proper grammar, but thet outcome is a piece of art,");
 	return (0);
 }

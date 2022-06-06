@@ -10,20 +10,20 @@
 int main(void)
 {
 	
-	int n;
+	long int n;
 	srand(time(0));
 	n = rand() - RAND_MAX/2;
 	if (n<0)
 	{
-		printf("%u is negative\n", n);
+		printf("%li is negative\n", n);
 	}
 	else if(n>0)
 	{
-		printf("%u is positive\n", n);
+		printf("%li is positive\n", n);
 	}
 	else
 	{
-		printf("%u is zero\n", n);
+		printf("%li is zero\n", n);
 	}
 
 

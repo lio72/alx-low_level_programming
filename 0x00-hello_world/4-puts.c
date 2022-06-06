@@ -1,10 +1,11 @@
 #include <stdio.h>
 
-/*
- * mein programme helps us to print one sentence
- */
+/**
+ * main- Entry point
+ *
+ * Return: always 0 (sucess)
+*/
 int main(void)
-/*main is our principal function*/
 {
 	puts("\"Programming is like building a multilingual puzzle");
 	return (0);

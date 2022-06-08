@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_alphabet - function to print string
+ * print_alphabet_x10 - function to print string
  *
  * _putchar - write the character
  * Return: always 0 (sucess)

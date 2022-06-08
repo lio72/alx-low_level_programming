@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * print_alphabet - function to print string 
  *@c : is character
@@ -12,5 +13,5 @@ void print_alphabet(void)
 
 	for (c = 'a'; c <= 'z'; c++)
 		_putchar(c);
-	_putchar("\n");
+	printf("\n");
 }

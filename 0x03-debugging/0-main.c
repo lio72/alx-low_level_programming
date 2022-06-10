@@ -5,13 +5,17 @@
  * Return: always 0 (sucess)
 */
 
-void main(void)
+int main(void)
 
 {
 	int i;
 
+	void  positive_or_negative(int);
+
 	i = 0;
 
 	positive_or_negative(i);
+
+	retun (0);
 
 }

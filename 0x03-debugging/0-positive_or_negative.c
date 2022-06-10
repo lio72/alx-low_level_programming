@@ -5,7 +5,8 @@
  *
  * Return: always 0 (sucess)
 */
-int main(void)
+
+void positive_or_negative(void)
 {
 	int n;
 
@@ -25,5 +26,5 @@ int main(void)
 	{
 		printf("%d is zero\n", n);
 	}
-	return (0);
+	
 }

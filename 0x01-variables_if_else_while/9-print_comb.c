@@ -13,7 +13,7 @@ int main(void)
 
 	for (i = 48 ; i < 58 ; i++)
 	{
-		putchar(i);	
+		putchar(i);
 		if (i < 57)
 		{
 			putchar(44);
@@ -21,9 +21,7 @@ int main(void)
 		}
 		else
 		{
-
 		}
-
 	}
 	putchar(*"\n");
 	return (0);

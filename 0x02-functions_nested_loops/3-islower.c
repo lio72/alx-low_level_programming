@@ -19,9 +19,13 @@ int _islower(int c)
 	{
 		return (1);
 	}
-	if (res == 0)
+	else if (res == 0)
 	{
 		return (0);
 	}
+	else
+	{
+	}
+
 
 }

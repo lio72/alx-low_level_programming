@@ -2,7 +2,7 @@
 #include <ctype.h>
 
 /**
- * print_alphabet_x10 - function to print string
+ * _islower - function to print string
  *
  * print_alphabet - write the character
  * Return: always 0 (sucess)
@@ -26,6 +26,4 @@ int _islower(int c)
 	else
 	{
 	}
-
-
 }

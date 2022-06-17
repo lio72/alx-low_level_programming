@@ -2,18 +2,20 @@
 #include <ctype.h>
 
 /**
- * _islower - function to print string
+ * _isalpha - function to print string
  *
  * print_alphabet - write the character
  * Return: always 0 (sucess)
  * @c : is parameter
- * islower - is local fuction that we use
+ * isalpha - is local fuction that we use
  */
 
 int _isalpha(int c)
 
 {
 	int res;
+	
+	c = toupper((unsigned char) c);
 
 	res = isalpha(c);
 

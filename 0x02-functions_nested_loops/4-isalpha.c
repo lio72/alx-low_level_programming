@@ -14,7 +14,7 @@ int _isalpha(int c)
 
 {
 	int res;
-	
+
 	c = toupper((unsigned char) c);
 
 	res = isalpha(c);

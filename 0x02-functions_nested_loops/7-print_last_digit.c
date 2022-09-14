@@ -14,8 +14,8 @@ int print_last_digit(int n)
 	if (val < 0)
 	{
 		val = val * -1
-		return (val);
 		_putchar(val);
+		return (val);
 	}
 	else
 	{

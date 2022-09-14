@@ -14,7 +14,7 @@ void jack_bauer(void)
 	int h = 0;
 	int min = 0;
 	int h_tmp;
-	int min_temp;
+	int min_tmp;
 
 	while (h <= 23)
 	{

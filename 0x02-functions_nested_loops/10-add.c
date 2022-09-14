@@ -2,7 +2,7 @@
 #include <ctype.h>
 
 /**
- * _add- give absolu value of one number
+ * add- give absolu value of one number
  *
  * Return: always valus (sucess)
  * @n1 : is parameter1

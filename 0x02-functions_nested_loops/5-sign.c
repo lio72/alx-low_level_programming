@@ -6,7 +6,7 @@
  *
  * Return: always valus (sucess)
  * @n : is parameter
- *
+ *putchar : is define in main.h
  */
 
 int print_sign(int n)
@@ -17,14 +17,17 @@ int print_sign(int n)
 	if (n > 0)
 	{
 		res = 1;
+		printf("+");
 	}
 	else if (n < 0)
 	{
 		res = -1;
+		printf("-");
 	}
 	else
 	{
 		res = 0;
+		printf("0");
 	}
 	return (res);
 }

@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * nul - fuction test if enter is digit
@@ -11,9 +10,6 @@
 
 int mul(int a, int b)
 {
-	int val;
-
-	val = a * b;
-	return (val);
+	return (a * b);
 
 }

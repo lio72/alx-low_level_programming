@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * nul - fuction test if enter is digit
+ * mul - fuction test if enter is digit
  *
  * @a : a is parameter1
  * @b : b is parameter2

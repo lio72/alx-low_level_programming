@@ -4,8 +4,8 @@
 /**
  * nul - fuction test if enter is digit
  *
- *@a : is parameter1
- *@b : is parameter2
+ * @a : is parameter1
+ * @b : is parameter2
  * Return: always 0 (sucess)
  */
 

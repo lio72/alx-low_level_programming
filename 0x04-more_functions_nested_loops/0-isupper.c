@@ -2,14 +2,21 @@
 #include <stdio.h>
 
 /**
- * print_alphabet - function to print string
+ * _isupper - function to print string
  *
- * _putchar - write the character
+ *@c : is parameter
  * Return: always 0 (sucess)
  */
 
 int _isupper(int c)
 {
-	return ((isupper(c));
+	if (c <= "Z" && c >= "A")
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 
 }

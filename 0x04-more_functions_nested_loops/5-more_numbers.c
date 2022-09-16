@@ -4,7 +4,7 @@
  * more_numbers - fuction test if enter is digit
  *
  *
- * Return: always 0 (sucess)
+ *
  */
 
 void more_numbers(void)

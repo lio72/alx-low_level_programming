@@ -1,27 +1,28 @@
 #include "main.h"
 
 /**
- * more_numbers - fuction test if enter is digit
- *
- *
- *
+ * print_diagonal - draws a diagonal line on the terminal
+ * @n: number of times the character \ should be printed
  */
-
-void more_numbers(void)
+void print_diagonal(int n)
 {
-	int i, j;
-
-	for (i = 0; i < 10; i++)
+	if (n <= 0)
 	{
-		for (j = 0; j <= 14; j++)
+		_putchar('\n');
+	} else
+	{
+		int i, j;
+
+		for (i = 0; i < n; i++)
 		{
-			if (j >= 10)
+			for (j = 0; j < n; j++)
 			{
-				_putchar(j / 10 + '0');
+				if (j == i)
+					_putchar('\\');
+				else if (j < i)
+					_putchar(' ');
 			}
-			_putchar(j % 10 + '0');
+			_putchar('\n');
 		}
 	}
-	_putchar('\n');
-
 }

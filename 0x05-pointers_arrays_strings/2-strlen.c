@@ -2,15 +2,14 @@
 #include <string.h>
 
 /**
- * _strlen - is function to update values
+ * _strlen - is function that give len
  *
- * 
  * @s : is parameter
- * return 0
- *
+ * Return : length of string
  */
 
 int _strlen(char *s)
+
 {
 	return (strlen(s));
 }

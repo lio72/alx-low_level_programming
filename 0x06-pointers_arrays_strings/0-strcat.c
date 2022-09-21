@@ -5,7 +5,7 @@
  *
  * @dest : is parameter
  * @src : is parmeter
- * Return dest cat
+ * Return @dest
  *
  */
 
@@ -14,11 +14,11 @@ char *_strcat(int *dest, int *src)
 {
 	int i = 0, k;
 
-	while (dest[i] != 0)
+	while (dest[i] != '\0')
 	{
 		i++;
 	}
-	for (k = 0; src[k]; k++)
+	for (k = 0; src[k] != '\0'; k++)
 	{
 		dest[i] = src[k];
 		i++;

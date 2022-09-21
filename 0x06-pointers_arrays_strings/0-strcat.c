@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- * *_strcat - return value of sting cam
+ * _strcat - concanter @dest and @src
  *
  * @dest : is parameter
  * @src : is parmeter
- * Return @dest
+ *
+ * Return : @dest
  *
  */
 
 char *_strcat(int *dest, int *src)
-
 {
 	int i = 0;
 	int k;

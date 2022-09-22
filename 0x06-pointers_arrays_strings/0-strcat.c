@@ -1,13 +1,9 @@
 #include "main.h"
-
 /**
- * _strcat - concanter @dest and @src
- *
- * @dest : is parameter
- * @src : is parmeter
- *
- * Return : @dest
- *
+ * _strcat - this is a funcion strcat
+ * @dest: first param
+ * @src: second param
+ * Return: a pointer to the destination string dest
  */
 
 char *_strcat(int *dest, int *src)

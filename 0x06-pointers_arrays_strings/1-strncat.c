@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * _strncat - function that concatenates two strings.
+ * _strncat - function that concatenates two strings and return @dest.
  *
- * @dest : is the parmeter1.
- * @src : is the parameter2.
- * @n : is the number of char to concanter.
+ * @dest: is the parmeter1.
+ * @src: is the parameter2.
+ * @n: is the number of char to concanter.
  *
- *return dest .
+ * Return: dest .
  */
 
 char *_strncat(char *dest, char *src, int n)

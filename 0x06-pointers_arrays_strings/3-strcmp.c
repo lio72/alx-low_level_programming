@@ -18,15 +18,15 @@ int _strcmp(char *s1, char *s2)
 	for (i = 0; s2[i] != '\0'; i++)
 	if (j > i)
 	{
-		val = 15
+		val = 15;
 	}
 	else if (j < i)
 	{
-		val = -15
+		val = -15;
 	}
 	else
 	{
-		val = 0
+		val = 0;
 	}
 
 	return (val);

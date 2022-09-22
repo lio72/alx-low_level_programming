@@ -1,1 +1,1 @@
-we are going to use pointers array string in all our task
+0x06. C - More pointers, arrays and strings

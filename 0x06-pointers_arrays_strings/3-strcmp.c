@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strcmp - function that concatenates two strings and return @dest.
+ * _strcmp - function that compare two string and return value @val.
  *
  * @s1: is the parmeter1.
  * @s2: is the parameter2.
@@ -28,7 +28,6 @@ int _strcmp(char *s1, char *s2)
 	{
 		val = 0;
 	}
-
 	return (val);
 
 }

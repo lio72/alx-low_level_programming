@@ -16,7 +16,7 @@ int byteCount;
 
 for (byteCount = 0; byteCount < n && src[byteCount] != '\0'; byteCount++)
 dest[byteCount] = src[byteCount];
-for (; byteCount < n; byteCount++)
+for (bytecount = 0; byteCount < n; byteCount++)
 dest[byteCount] = '\0';
 
 return (dest);

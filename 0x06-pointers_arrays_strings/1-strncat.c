@@ -22,9 +22,9 @@ char *_strncat(char *dest, char *src, int n)
 
 	while (src[j] != '\0' &&  j <= n)
 	{
-		i++;
 		dest[i] = src[j];
 		j++;
+		i++;
 	}
 	dest[i] = '\0';
 

@@ -30,7 +30,7 @@ int _strcmp(char *s1, char *s2)
 	}
 	else if (s1[i] == '\0')
 	{
-		val = (-s2[i]);
+		val = s2[i];
 		break;
 	}
 	else if (s2[i] == '\0')

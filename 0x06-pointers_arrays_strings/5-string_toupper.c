@@ -1,23 +1,26 @@
 #include "main.h"
 
 /**
- * string_toupper - Capitalize whole string.
+ * string_toupper - function that write string on toupper;
  *
- * @s: string to be capitalized
+ * @str: is the parmeter1.
  *
- * Return: Always 0.
+ * Return: dest .
  */
-char *string_toupper(char *s)
-{
-	int i = 0;
 
-	while (s[i] != '\0')
+char *string_toupper(char *str)
+
+{
+	int j = 0;
+
+	while (str[j] != '\0')
 	{
-		if ((s[i] >= 97) && (s[i] <= 122))
+		if (str[j] >= 'a' && str[j] <= 'z')
 		{
-			s[i] = s[i] - 32;
+			str[j] = str[j] - 32;
 		}
-	i++;
 	}
-	return (s);
+
+	return (str);
+
 }

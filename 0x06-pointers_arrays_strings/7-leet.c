@@ -9,7 +9,7 @@
  */
 
 char *leet(char *str)
-i
+
 {
 	int j = 0;
 

@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _reverse_array - function that reverse array.
+ * reverse_array - function that reverse array.
  *
  * @a: is the parmeter1.
  * @n: is the parameter2.
@@ -11,12 +11,15 @@
 void reverse_array(int *a, int n)
 
 {
-	int memo, i;
+	int memo, i, j;
 
-	for (i = n - 1; i > n ; i--)
+	j = n - 1;
+
+	for (i = 0; i < n; i++)
 	{
-		memo = a[n - 1 - i];
-		a[n - 1 - i] = a[i];
-		a[i] =  memo;
+		memo = a[i];
+		a[i] = a[j];
+		a[j] =  memo;
+		j--;
 	}
 }

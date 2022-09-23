@@ -11,31 +11,23 @@
 char *leet(char *str)
 
 {
-	int j = 0;
+	int j, i;
+	char code1[] = "aAeEoOtTlL";
+	char code2[] = "4433007711";
+
+	j = 0;
 
 	while (str[j] != '\0')
 	{
-		if (str[j] == 'a' || str[j] == 'A')
+		i = 0;
+		while (i < 10)
 		{
-			str[j] = '4';
+			if (code1[i] == str[j])
+			{
+				str[j] = code2[i];
+			}
+			i++;
 		}
-		else if (str[j] == 'e' || str[j] == 'E')
-		{
-			str[j] = '3';
-		}
-		else if (str[j] == 'o' || str[j] == 'O')
-		{
-			str[j] = '0';
-		}
-		else if (str[j] == 't' || str[j] == 'T')
-		{
-			str[j] = '7';
-		}
-		else if (str[j] == 'l' || str[j] == 'L')
-		{
-			str[j] = '1';
-		}
-
 		j++;
 	}
 

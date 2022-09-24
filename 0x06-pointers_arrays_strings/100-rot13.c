@@ -14,9 +14,11 @@ char *rot13(char *str)
 	int j, val;
 	char s = 'CR';
 
-	for (j = 0; str[j] != '\0'; j++)
+	for (j = 0; str[j] != '\0' && ((str[j] >= 'a' && str[j] <= 'z') ||
+	(str[j] >= 'A' && str[j] <= 'Z')); j++)
 	{
 		str[j] = str[j] + s;
+
 		if ((str[j] >= 'A' && str[j] <= 'Z') || (str[j] >= 'a' && str[j] <= 'z'))
 		{
 

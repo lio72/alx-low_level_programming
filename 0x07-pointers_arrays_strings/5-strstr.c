@@ -9,18 +9,25 @@
 */
 
 char *_strstr(char *haystack, char *needle)
-
 {
-	int i;
+	unsigned int i = 0, j = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	while (haystack[i])
 	{
-		if (s[i] == c)
+		while (needle[j] && (haystack[i] == needle[0]))
 		{
-			return (s + i);
+			if (haystack[i + j] == needle[j])
+				j++;
+			else
+				break;
 		}
-
+		if (needle[j])
+		{
+			i++;
+			j = 0;
+		}
+		else
+			return (haystack + i);
 	}
-	return (NULL);
-
+	return (0);
 }

@@ -1,4 +1,5 @@
 #include "main.h"
+#include <math.h>
 
 /**
 * _pow_recursion - function that concatenates two strings.

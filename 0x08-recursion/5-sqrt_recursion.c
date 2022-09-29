@@ -1,4 +1,5 @@
 #include "main.h"
+int _root_sqrt(int raiz, int cont);
 
 /**
 * _is_prime_number - function that concatenates two strings.

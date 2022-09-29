@@ -1,7 +1,7 @@
 #include "main.h"
 int calculo_primo(int num_, int inf);
 /**
-* _sqrt_recursion - function that concatenates two strings.
+* is_prime_number - function that concatenates two strings.
 * @n: is number to calculate.
 *
 * Return: pointer to destination string.

@@ -9,7 +9,6 @@ int _root_sqrt(int raiz, int cont);
 */
 
 int is_prime_number(int n)
-
 {
 	if (n == 0)
 	{

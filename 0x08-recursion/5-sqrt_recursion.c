@@ -8,7 +8,7 @@ int _root_sqrt(int raiz, int cont);
 * Return: pointer to destination string.
 */
 
-int is_prime_number(int n)
+int _sqrt_recursion(int n)
 {
 	if (n == 0)
 	{

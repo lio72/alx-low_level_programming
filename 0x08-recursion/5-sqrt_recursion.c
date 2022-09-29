@@ -10,13 +10,39 @@
 int is_prime_number(int n)
 
 {
-	if (*s ==  '\0')
+	if (n == 0)
 	{
-		_putchar(*s);
-
+		return (0);
+	}
+	if (n < 0)
+	{
+		return (-1);
 	}
 	else
 	{
-		_putchar('\n');
+		return (_root_sqrt(n, 1));
+	}
+}
+
+/**
+ * _root_sqrt - calculate the square root
+ *@raiz: value to calc the square root
+ *@cont: variable to cont
+ *
+ * Return: the number with the solution
+ */
+int _root_sqrt(int raiz, int cont)
+{
+	if (cont * cont == raiz)
+	{
+		return (cont);
+	}
+	else if (cont * cont > raiz)
+	{
+	return (-1);
+	}
+	else
+	{
+		return (_root_sqrt(raiz, cont + 1));
 	}
 }

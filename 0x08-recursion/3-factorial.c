@@ -10,13 +10,15 @@
 int factorial(int n)
 
 {
-	if (*s ==  '\0')
+	if (n < 0)
 	{
-		_putchar(*s);
+		return (-1);
+	}
 
-	}
-	else
+	else if (n == 0)
 	{
-		_putchar('\n');
+		return (1);
 	}
+
+	return (n * factorial(n - 1));
 }

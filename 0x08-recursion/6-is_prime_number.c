@@ -7,8 +7,7 @@ int calculo_primo(int num_, int inf);
 * Return: pointer to destination string.
 */
 
-int _sqrt_recursion(int n)
-
+int is_prime_number(int n)
 {
 	int a = 2;
 

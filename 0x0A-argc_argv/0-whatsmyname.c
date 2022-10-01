@@ -4,8 +4,8 @@
  * main - is the principal programme to printf.
  * @argc: is argument1.
  * @argv: is argument2.
- * return 0.
  *
+ * Return: 0.
  */
 
 int main(int argc, char **argv)

@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 {
 	int a, b;
 
-	if (argc <= 22)
+	if (argc <= 2)
 	{
 		printf("Error\n");
 	}

@@ -1,39 +1,29 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
-
 /**
-* create_array - function that concatenates two strings.
-* @size: is parameter 1.
-* @c: is parameter 2.
-*
-* Return: pointer to destination string.
-*/
-
-char *create_array(unsigned int size, char c)
-
+ * _strdup - returns a pointer to a newly allocated space in memory.
+ * @str: string.
+ *
+ * Return: pointer of an array of chars
+ */
+char *_strdup(char *str)
 {
-	char *s;
-	unsigned int i;
+	char *strout;
+	unsigned int i, j;
 
-
-	if (size == 0)
-	{
+	if (str == NULL)
 		return (NULL);
-	}
 
-	s = (char *)malloc(sizeof(*s) * size);
-	if (s == NULL)
-	{
+	for (i = 0; str[i] != '\0'; i++)
+		;
+
+	strout = (char *)malloc(sizeof(char) * (i + 1));
+
+	if (strout == NULL)
 		return (NULL);
-	}
-	else
-	{
-		for (i = 0; i < size; i++)
-		{
-			s[i] = c;
-		}
-	}
 
-	return (s);
+	for (j = 0; j <= i; j++)
+		strout[j] = str[j];
+
+	return (strout);
 }

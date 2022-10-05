@@ -1,39 +1,43 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
-* create_array - function that concatenates two strings.
-* @size: is parameter 1.
-* @c: is parameter 2.
-*
-* Return: pointer to destination string.
-*/
-
-char *create_array(unsigned int size, char c)
-
+ * str_concat - concatenates two strings.
+ * @s1: first string.
+ * @s2: second string.
+ *
+ * Return: pointer of an array of chars
+ */
+char *str_concat(char *s1, char *s2)
 {
-	char *s;
-	unsigned int i;
+	char *strout;
+	unsigned int i, j, k, limit;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
-	if (size == 0)
+	for (i = 0; s1[i] != '\0'; i++)
+		;
+
+	for (j = 0; s2[j] != '\0'; j++)
+		;
+
+	strout = malloc(sizeof(char) * (i + j + 1));
+
+	if (strout == NULL)
 	{
+		free(strout);
 		return (NULL);
 	}
 
-	s = (char *)malloc(sizeof(*s) * size);
-	if (s == NULL)
-	{
-		return (NULL);
-	}
-	else
-	{
-		for (i = 0; i < size; i++)
-		{
-			s[i] = c;
-		}
-	}
+	for (k = 0; k < i; k++)
+		strout[k] = s1[k];
 
-	return (s);
+	limit = j;
+	for (j = 0; j <= limit; k++, j++)
+		strout[k] = s2[j];
+
+	return (strout);
 }

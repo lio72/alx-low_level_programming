@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-#include <stdio.h>
-#include <stdlib.h>
 #include "main.h"
 
-=======
-#include "main.h"
->>>>>>> 8d5cc2ae96f456cfde71d24f59e1b5677ad81e1c
 /**
  * _atoi - int
  * @s: pointer

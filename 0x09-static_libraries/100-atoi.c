@@ -1,16 +1,36 @@
+<<<<<<< HEAD
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
 
+=======
+#include "main.h"
+>>>>>>> 8d5cc2ae96f456cfde71d24f59e1b5677ad81e1c
 /**
- * _atoi - Entry point.
- * @s: is paramete.
- *
- * Return: always 0 (sucess)
-*/
-
+ * _atoi - int
+ * @s: pointer
+ * Return: int.
+ */
 int _atoi(char *s)
 {
-	printf("%s\n", s);
-	return (0);
+	int i;
+	int res = 0;
+	int sig = -1;
+	int brk = 0;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		if (s[i] == '-')
+			sig = sig * -1;
+		if (s[i] >= '0' && s[i] <= '9')
+		{
+			res = res * 10;
+			res -= (s[i] - '0');
+			brk = 1;
+		}
+		else if (brk == 1)
+			break;
+	}
+	res = sig * res;
+	return (res);
 }

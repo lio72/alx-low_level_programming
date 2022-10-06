@@ -1,28 +1,18 @@
 #include "main.h"
-#include <ctype.h>
 
 /**
- * _islower - function to print string
+ * _islower - check the code for Holberton School students.
  *
- * print_alphabet - write the character
- * Return: always 0 (sucess)
- * @c : is parameter
- * islower - is local fuction that we use
+ * @c:  is a parameter
+ *
+ * Return: Always 0.
  */
 
 int _islower(int c)
-
 {
-	int res;
-
-	res = islower(c);
-
-	if (res > 0)
+	if (c >= 97 && c <= 122)
 	{
-		res = 1;
+		return (1);
 	}
-	else
-	{
-	}
-	return (res);
+	return (0);
 }

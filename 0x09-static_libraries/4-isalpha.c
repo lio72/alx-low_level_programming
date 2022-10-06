@@ -1,30 +1,23 @@
 #include "main.h"
-#include <ctype.h>
 
 /**
- * _isalpha - function to print string
+ * _isalpha - check the code for Holberton School students.
  *
- * print_alphabet - write the character
- * Return: always 0 (sucess)
- * @c : is parameter
- * isalpha - is local fuction that we use
+ * @c: is c an integer argument
+ *
+ * Return: Always 0.
  */
 
 int _isalpha(int c)
-
 {
-	int res;
 
-	c = toupper((unsigned char) c);
-
-	res = isalpha(c);
-
-	if (res > 0)
+	if (c >= 97 && c <= 122)
 	{
-		res = 1;
+		return (1);
 	}
-	else
+	else if (c >= 65 && c <= 90)
 	{
+		return (1);
 	}
-	return (res);
+	return (0);
 }

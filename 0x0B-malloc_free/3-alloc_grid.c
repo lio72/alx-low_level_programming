@@ -1,39 +1,43 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
-* create_array - function that concatenates two strings.
-* @size: is parameter 1.
-* @c: is parameter 2.
-*
-* Return: pointer to destination string.
-*/
-
-char *create_array(unsigned int size, char c)
-
+ * alloc_grid - returns a pointer to a 2 dimensional array of integers.
+ * @width: width of the array.
+ * @height: height of the array.
+ *
+ * Return: pointer of an array of integers
+ */
+int **alloc_grid(int width, int height)
 {
-	char *s;
-	unsigned int i;
+	int **gridout;
+	int i, j;
 
+	if (width < 1 || height < 1)
+		return (NULL);
 
-	if (size == 0)
+	gridout = malloc(height * sizeof(int *));
+	if (gridout == NULL)
 	{
+		free(gridout);
 		return (NULL);
 	}
 
-	s = (char *)malloc(sizeof(*s) * size);
-	if (s == NULL)
+	for (i = 0; i < height; i++)
 	{
-		return (NULL);
-	}
-	else
-	{
-		for (i = 0; i < size; i++)
+		gridout[i] = malloc(width * sizeof(int));
+		if (gridout[i] == NULL)
 		{
-			s[i] = c;
+			for (i--; i >= 0; i--)
+				free(gridout[i]);
+			free(gridout);
+			return (NULL);
 		}
 	}
 
-	return (s);
+	for (i = 0; i < height; i++)
+		for (j = 0; j < width; j++)
+			gridout[i][j] = 0;
+
+	return (gridout);
 }

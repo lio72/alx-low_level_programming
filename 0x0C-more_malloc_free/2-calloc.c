@@ -1,22 +1,31 @@
+#include <stdlib.h>
 #include "main.h"
-#include <stdio.h>
-
 /**
- * _isupper - function to print string
- *
- *@c : is parameter
- * Return: always 0 (sucess)
- */
-
-int _isupper(int c)
+  * _calloc - allocates memory of an array using malloc.
+  * @nmemb: number of elements in array.
+  * @size: size of elements of array.
+  *
+  * Return: NULL is size or nmemb == 0.
+  * NULL if malloc fails.
+  * Pointer to memory allocated if successful.
+  */
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	if (c <= 'Z' && c >= 'A')
+	void *p;
+	unsigned int i;
+
+	if (nmemb == 0 || size == 0)
+		return (NULL);
+	p = malloc(nmemb * size);
+	if (p == NULL)
 	{
-		return (1);
-	}
-	else
-	{
-		return (0);
+		return (NULL);
 	}
 
+	for (i = 0; i < (nmemb * size); i++)
+	{
+		*((char *)(p) + i) = 0;
+	}
+
+	return (p);
 }

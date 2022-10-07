@@ -1,22 +1,35 @@
+#include <stdlib.h>
 #include "main.h"
-#include <stdio.h>
-
 /**
- * _isupper - function to print string
- *
- *@c : is parameter
- * Return: always 0 (sucess)
- */
-
-int _isupper(int c)
+  *array_range - creates an array of integers.
+  *@min: minimum value.
+  *@max: maximum value.
+  *
+  *Return: pointer to newly created array.
+  *NULL if malloc fails.
+  *NULL if min > max.
+  */
+int *array_range(int min, int max)
 {
-	if (c <= 'Z' && c >= 'A')
+	int range, i;
+	int *p;
+
+	range = 0;
+
+	if (min > max)
+		return (NULL);
+
+	range = ((max + 1) - min);
+
+	p = malloc(range * sizeof(int));
+
+	if (p == NULL)
+		return (NULL);
+
+	for (i = 0; i < range; i++)
 	{
-		return (1);
-	}
-	else
-	{
-		return (0);
+		*(p + i) = min + i;
 	}
 
+	return (p);
 }

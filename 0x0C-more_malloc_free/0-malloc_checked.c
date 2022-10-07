@@ -1,22 +1,17 @@
+#include <stdlib.h>
 #include "main.h"
-#include <stdio.h>
-
 /**
- * _isupper - function to print string
- *
- *@c : is parameter
- * Return: always 0 (sucess)
- */
-
-int _isupper(int c)
+  * malloc_checked - allocates memory using malloc.
+  * @b: size of memory to be allocated.
+  *
+  * Return: pointer to allocated memory.
+  */
+void *malloc_checked(unsigned int b)
 {
-	if (c <= 'Z' && c >= 'A')
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+	void *p = malloc(b);
 
+	if (p == NULL)
+		exit(98);
+
+	return (p);
 }

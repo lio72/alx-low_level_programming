@@ -1,4 +1,5 @@
 #define "dog.h"
+#define "main.h"
 
 
 /**

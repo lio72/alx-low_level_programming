@@ -1,30 +1,71 @@
-#include "function_pointers.h"
-#include <stdlib.h>
+#include "3-calc.h"
 
 /**
- * array_iterator - name is function to print name
+ * op_add - adds two numbers.
+ * @a: first number.
+ * @b: second number.
  *
- * @size: is parameter 1
- * @array: is pointer on function
- * @action: is on function as parameter
- *
- * Return: 0
+ * Return: add.
  */
-
-
-void array_iterator(int *array, size_t size, void (*action)(int))
+int op_add(int a, int b)
 {
-	unsigned int i;
+	return (a + b);
+}
 
-	if (!array || !action)
+/**
+ * op_sub - subctracts two numbers.
+ * @a: first number.
+ * @b: second number.
+ *
+ * Return: difference.
+ */
+int op_sub(int a, int b)
+{
+	return (a - b);
+}
+
+/**
+ * op_mul - multiplies two numbers.
+ * @a: first number.
+ * @b: second number.
+ *
+ * Return: multiplication.
+ */
+int op_mul(int a, int b)
+{
+	return (a * b);
+}
+
+/**
+ * op_div - divides two numbers.
+ * @a: first number.
+ * @b: second number.
+ *
+ * Return: division.
+ */
+int op_div(int a, int b)
+{
+	if (b == 0)
 	{
-		return;
+		printf("Error\n");
+		exit(100);
 	}
-	else
+	return (a / b);
+}
+
+/**
+ * op_mod - calculates the module of two numbers.
+ * @a: first number.
+ * @b: second number.
+ *
+ * Return: remainder of the division.
+ */
+int op_mod(int a, int b)
+{
+	if (b == 0)
 	{
-		for (i = 0; i < size; i++)
-		{
-			action(array[i]);
-		}
+		printf("Error\n");
+		exit(100);
 	}
+	return (a % b);
 }

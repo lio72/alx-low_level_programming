@@ -8,7 +8,6 @@
  * @array: is pointer on function
  * @action: is on function as parameter
  *
- * Return: 0
  */
 
 

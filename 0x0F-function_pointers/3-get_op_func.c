@@ -1,30 +1,30 @@
-#include "function_pointers.h"
-#include <stdlib.h>
+#include "3-calc.h"
 
 /**
- * array_iterator - name is function to print name
+ * get_op_func - selects the correct function to perform
+ * the operation asked by the user.
+ * @s: char operator.
  *
- * @size: is parameter 1
- * @array: is pointer on function
- * @action: is on function as parameter
- *
- * Return: 0
+ * Return: pointer to the function that corresponds to the operator.
  */
-
-
-void array_iterator(int *array, size_t size, void (*action)(int))
+int (*get_op_func(char *s))(int, int)
 {
-	unsigned int i;
+	op_t ops[] = {
+		{"+", op_add},
+		{"-", op_sub},
+		{"*", op_mul},
+		{"/", op_div},
+		{"%", op_mod},
+		{NULL, NULL}
+	};
+	int i = 0;
 
-	if (!array || !action)
+	while (i < 10)
 	{
-		return;
+		if (s[0] == ops->op[i])
+			break;
+		i++;
 	}
-	else
-	{
-		for (i = 0; i < size; i++)
-		{
-			action(array[i]);
-		}
-	}
+
+	return (ops[i / 2].f);
 }

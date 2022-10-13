@@ -4,7 +4,7 @@
 /**
  * array_iterator - name is function to print name
  *
- * @size: is parameter 1
+ * @size: is parameter 
  * @array: is pointer on function
  * @action: is on function as parameter
  *
@@ -16,11 +16,7 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	unsigned int i;
 
-	if (!array || !action)
-	{
-		return;
-	}
-	else
+	if (array && action)
 	{
 		for (i = 0; i < size; i++)
 		{

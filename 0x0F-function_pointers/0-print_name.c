@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * print_name - name is function to print name
@@ -11,6 +12,9 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	f(*name);
-	return (0);
+	if (!name || !f)
+	{
+		return;
+	}
+	f(name);
 }

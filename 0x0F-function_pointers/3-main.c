@@ -1,30 +1,40 @@
-#include "function_pointers.h"
-#include <stdlib.h>
+#include "3-calc.h"
 
 /**
- * array_iterator - name is function to print name
+ * main - check the code for Holberton School students.
+ * @argc: argument count.
+ * @argv: argument vector.
  *
- * @size: is parameter 1
- * @array: is pointer on function
- * @action: is on function as parameter
- *
- * Return: 0
+ * Return: Always 0.
  */
-
-
-void array_iterator(int *array, size_t size, void (*action)(int))
+int main(int argc, char *argv[])
 {
-	unsigned int i;
+	int a, b;
+	int (*operation)(int, int);
 
-	if (!array || !action)
+	if (argc != 4)
 	{
-		return;
+		printf("Error\n");
+		exit(98);
 	}
-	else
+
+	if (argv[2][1])
 	{
-		for (i = 0; i < size; i++)
-		{
-			action(array[i]);
-		}
+		printf("Error\n");
+		exit(99);
 	}
+
+	operation = get_op_func(argv[2]);
+
+	if (operation == NULL)
+	{
+		printf("Error\n");
+		exit(99);
+	}
+
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
+
+	printf("%d\n", operation(a, b));
+	return (0);
 }

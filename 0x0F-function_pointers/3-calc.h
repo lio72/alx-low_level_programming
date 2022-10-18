@@ -1,30 +1,25 @@
-#include "function_pointers.h"
+#ifndef _CALC_H_
+#define _CALC_H_
+
 #include <stdlib.h>
-
+#include <stdio.h>
 /**
- * array_iterator - name is function to print name
+ * struct op - Struct op
  *
- * @size: is parameter 1
- * @array: is pointer on function
- * @action: is on function as parameter
- *
- * Return: 0
+ * @op: The operator
+ * @f: The function associated
  */
-
-
-void array_iterator(int *array, size_t size, void (*action)(int))
+typedef struct op
 {
-	unsigned int i;
+	char *op;
+	int (*f)(int a, int b);
+} op_t;
 
-	if (!array || !action)
-	{
-		return;
-	}
-	else
-	{
-		for (i = 0; i < size; i++)
-		{
-			action(array[i]);
-		}
-	}
-}
+int op_add(int a, int b);
+int op_sub(int a, int b);
+int op_mul(int a, int b);
+int op_div(int a, int b);
+int op_mod(int a, int b);
+int (*get_op_func(char *s))(int, int);
+
+#endif

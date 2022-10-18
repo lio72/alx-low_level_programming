@@ -21,9 +21,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	for (i = 0; i < n; i++)
 	{
-		if (separator)
+		if (!separator)
 		{
-			printf("%s%d", separator, va_arg(mylist, int));
+			printf("%d", va_arg(mylist, int));
 		}
 		else if (separator && i == 0)
 		{
@@ -31,7 +31,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		}
 		else
 		{
-			printf("%d", va_arg(mylist, int));
+			printf("%s%d", separator, va_arg(mylist, int));
 		}
 	}
 	va_end(mylist);

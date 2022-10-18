@@ -23,15 +23,15 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		if (separator)
 		{
-			printf("%s%d", separator, a_arg(mylist, unsigned int));
+			printf("%s%d", separator, va_arg(mylist, unsigned int));
 		}
 		else if (serapator && i == 0)
 		{
-			printf("%d", a_arg(mylist, unsigned int));
+			printf("%d", va_arg(mylist, unsigned int));
 		}
 		else
 		{
-			printf("%d", a_arg(mylist, unsigned int));
+			printf("%d", va_arg(mylist, unsigned int));
 		}
 	}
 	va_end(mylist);

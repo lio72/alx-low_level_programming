@@ -23,13 +23,12 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		for (i = 0; i < n; i++)
 		{
-			printf("%d", a_arg(mylist, unsigned int));
+			printf("%s%d", separator, a_arg(mylist, unsigned int));
 
 		}
 		va_end(mylist);
 	}
 	printf("\n");
-	return (0);
 
 
 }

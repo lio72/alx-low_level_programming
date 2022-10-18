@@ -19,16 +19,21 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	va_start(mylist, n);
 
-	if (separator)
+	for (i = 0; i < n; i++)
 	{
-		for (i = 0; i < n; i++)
+		if (separator)
 		{
 			printf("%s%d", separator, a_arg(mylist, unsigned int));
-
 		}
-		va_end(mylist);
+		else if (serapator && i == 0)
+		{
+			printf("%d", a_arg(mylist, unsigned int));
+		}
+		else
+		{
+			printf("%d", a_arg(mylist, unsigned int));
+		}
 	}
+	va_end(mylist);
 	printf("\n");
-
-
 }

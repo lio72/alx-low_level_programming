@@ -6,13 +6,13 @@
  * print_list - is function that print element
  *
  * @h: is list that we list.
- * Return: list
+ * Return: len
  */
 
 
 size_t print_list(const list_t *h)
 {
-	size_t len = 0;
+	size_t l = 0;
 
 	while (h)
 	{
@@ -25,8 +25,8 @@ size_t print_list(const list_t *h)
 		{
 			printf("[0] (nil)\n");
 		}
-		len = len + 1;
+		l = l + 1;
 		h = h->next;
 	}
-	return (len);
+	return (l);
 }

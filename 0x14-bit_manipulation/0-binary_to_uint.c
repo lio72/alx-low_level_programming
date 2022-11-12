@@ -11,6 +11,7 @@ unsigned int binary_to_uint(const char *b)
 
 {
 	int i = len(b);
+	int val;
 
 	if (b == 0)
 	{
@@ -19,11 +20,11 @@ unsigned int binary_to_uint(const char *b)
 
 	while (i >= 0)
 	{
-		if (*(b + i) != '0' || *(b + i) != '1')
+		if (*(b + i) != "0" || *(b + i) != "1")
 		{
 			return (0);
 		}
-		else if (*(b + i) == '1')
+		else if (*(b + i) == "1")
 		{
 			val = val + exp(i);
 		}

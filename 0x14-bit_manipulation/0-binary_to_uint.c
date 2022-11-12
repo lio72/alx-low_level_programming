@@ -15,7 +15,6 @@ unsigned int binary_to_uint(const char *b)
 	if (b == 0)
 	{
 		return (0);
-		break;
 	}
 
 	while (i >= 0)
@@ -23,7 +22,6 @@ unsigned int binary_to_uint(const char *b)
 		if (*(b + i) != '0' || *(b + i) != '1')
 		{
 			return (0);
-			break;
 		}
 		else if (*(b + i) == '1')
 		{

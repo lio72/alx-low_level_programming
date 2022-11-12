@@ -1,41 +1,13 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef __MAIN_H__
+#define __MAIN_H__
 
-int _putchar(char);
 unsigned int binary_to_uint(const char *b);
+void print_binary(unsigned long int n);
+int _putchar(char c);
+int get_bit(unsigned long int n, unsigned int index);
+int set_bit(unsigned long int *n, unsigned int index);
+int clear_bit(unsigned long int *n, unsigned int index);
+unsigned int flip_bits(unsigned long int n, unsigned long int m);
+int get_endianness(void);
 
-/**
- * len - is the function to calculate len of char
- * @s: is parameter 1
- * Return: i
- */
-
-int len(char *s)
-{
-	int i;
-
-	for (i = 1; *(s + i) != '\0'; i++)
-	{
-
-	}
-	return (i);
-}
-
-/**
- * exp - is function to calculate exponential 2
- * @n: is parameter2
- * Return: val;
- *
- */
-
-int  exp(int n)
-{
-	int val = 1;
-
-	for (i = 1; i <= n; i++)
-	{
-		val = val * 2;
-	}
-	return (val);
-}
 #endif

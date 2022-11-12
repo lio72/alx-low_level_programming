@@ -24,12 +24,9 @@ unsigned int binary_to_uint(const char *b)
 		{
 			return (0);
 		}
-		else if (*(b + i) == "1")
+		else if (*(b + i) & 1)
 		{
 			val = val + exp(i);
-		}
-		else
-		{
 		}
 		i--;
 	}

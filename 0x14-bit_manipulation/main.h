@@ -32,7 +32,7 @@ int  exp(int n)
 {
 	int val = 1;
 
-	for (i = 0; i <= n; i++)
+	for (i = 1; i <= n; i++)
 	{
 		val = val * 2;
 	}

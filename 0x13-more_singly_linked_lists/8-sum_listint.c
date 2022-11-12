@@ -1,31 +1,22 @@
 #include "lists.h"
 
 /**
- * add_nodeint_end - add new node at end of our linked list
+ * sum_listint - returns the sum of all the data (n) of
+ * a linked list.
+ * @head: head of a list.
  *
- * @head: is node to add to our list
- * @n: is value of our node
- * Return: listint_t
- *
- *
+ * Return: sum of all the data (n).
  */
-
-listint_t *add_nodeint_end(listint_t **head, const int n)
+int sum_listint(listint_t *head)
 {
-	listint_t  *node;
+	int sum;
 
-	node = (listint_t *)malloc(sizeof(listint_t));
+	sum = 0;
+	while (head != NULL)
+	{
+		sum += head->n;
+		head = head->next;
+	}
 
-	if (node == NULL)
-	{
-		return (NULL);
-	}
-	else
-	{
-		while (
-		node->n = n;
-		node->next = *head;
-		*head = node;
-		return (*head);
-	}
+	return (sum);
 }

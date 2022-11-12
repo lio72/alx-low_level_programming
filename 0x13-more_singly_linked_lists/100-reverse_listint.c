@@ -1,31 +1,27 @@
 #include "lists.h"
 
 /**
- * add_nodeint_end - add new node at end of our linked list
+ * reverse_listint - reverses a linked list.
+ * @head: head of a list.
  *
- * @head: is node to add to our list
- * @n: is value of our node
- * Return: listint_t
- *
- *
+ * Return: pointer to the first node.
  */
-
-listint_t *add_nodeint_end(listint_t **head, const int n)
+listint_t *reverse_listint(listint_t **head)
 {
-	listint_t  *node;
+	listint_t *p;
+	listint_t *n;
 
-	node = (listint_t *)malloc(sizeof(listint_t));
+	p = NULL;
+	n = NULL;
 
-	if (node == NULL)
+	while (*head != NULL)
 	{
-		return (NULL);
+		n = (*head)->next;
+		(*head)->next = p;
+		p = *head;
+		*head = n;
 	}
-	else
-	{
-		while (
-		node->n = n;
-		node->next = *head;
-		*head = node;
-		return (*head);
-	}
+
+	*head = p;
+	return (*head);
 }

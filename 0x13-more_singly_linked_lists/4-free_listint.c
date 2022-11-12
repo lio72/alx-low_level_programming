@@ -1,31 +1,18 @@
 #include "lists.h"
 
 /**
- * add_nodeint_end - add new node at end of our linked list
+ * free_listint - frees a linked list
+ * @head: head of a list.
  *
- * @head: is node to add to our list
- * @n: is value of our node
- * Return: listint_t
- *
- *
+ * Return: no return.
  */
-
-listint_t *add_nodeint_end(listint_t **head, const int n)
+void free_listint(listint_t *head)
 {
-	listint_t  *node;
+	listint_t *temp;
 
-	node = (listint_t *)malloc(sizeof(listint_t));
-
-	if (node == NULL)
+	while ((temp = head) != NULL)
 	{
-		return (NULL);
-	}
-	else
-	{
-		while (
-		node->n = n;
-		node->next = *head;
-		*head = node;
-		return (*head);
+		head = head->next;
+		free(temp);
 	}
 }

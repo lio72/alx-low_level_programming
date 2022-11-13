@@ -1,22 +1,34 @@
-#include "main.h"
+#iinclude "main.h"
 
 /**
- * print_binary - prints the binary representation
- * of a number.
- * @n: unsigned long int.
+ * print_binary - converts a int to binary
+ * @n: is a parameter.
  *
- * Return: no return.
+ * Return: nothing.
  */
+
 void print_binary(unsigned long int n)
 {
-	if (n >> 0)
+	int i = 0, val, val1, dp, exp;
+
+	val = n;
+	while (val != 0)
 	{
-		if (n >> 1)
-			print_binary(n >> 1);
-		_putchar((n & 1) + '0');
+		i++;
+		val = val >> 1;
 	}
-	else
+	while (i != 0)
 	{
-		_putchar('0');
+		val1 = n;
+		dp = i - 1;
+		exp = 1;
+		while (dp > 0)
+		{
+			exp = exp * 2;
+			dp--;
+		}
+		val1 = (val1 & exp)  >> i - 1;
+		printf("%d", val1);
+		i--;
 	}
 }

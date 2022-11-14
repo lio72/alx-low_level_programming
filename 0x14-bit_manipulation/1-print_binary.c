@@ -31,6 +31,6 @@ void print_binary(unsigned long int n)
 		}
 		val1 = (val1 & exp)  >> i - 1;
 		printf("%d", val1);
-		ii--;
+		i--;
 	}
 }

@@ -29,7 +29,7 @@ void print_binary(unsigned long int n)
 			dp--;
 		}
 		val1 = (val1 & exp)  >> i - 1;
-		printf("%lu", val1);
+		_putchar(val1);
 		i--;
 	}
 }

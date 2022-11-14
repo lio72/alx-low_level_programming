@@ -10,7 +10,8 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int i = 0, val, val1, dp, exp;
+	int i = 0, dp, exp;
+	unsigned long int val, val1;
 
 	val = n;
 	while (val != 0)
@@ -30,6 +31,6 @@ void print_binary(unsigned long int n)
 		}
 		val1 = (val1 & exp)  >> i - 1;
 		printf("%d", val1);
-		i--;
+		ii--;
 	}
 }

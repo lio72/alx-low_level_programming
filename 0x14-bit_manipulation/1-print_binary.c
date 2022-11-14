@@ -8,27 +8,9 @@
 
 void print_binary(unsigned long int n)
 {
-	int i = 0, dp, exp;
-	unsigned long int val, val1;
-
-	val = n;
-	while (val != 0)
+	if (n > 1)
 	{
-		i++;
-		val = val >> 1;
+		print_binary(n >> 1);
 	}
-	while (i != 0)
-	{
-		val1 = n;
-		dp = i - 1;
-		exp = 1;
-		while (dp > 0)
-		{
-			exp = exp * 2;
-			dp--;
-		}
-		val1 = (val1 & exp)  >> i - 1;
-		_putchar(val1);
-		i--;
-	}
+	_putchar((n & 1) + '0');
 }

@@ -5,7 +5,6 @@
  * print_binary - converts a int to binary
  * @n: is a parameter.
  *
- * Return: nothing.
  */
 
 void print_binary(unsigned long int n)
